@@ -1,4 +1,5 @@
 import 'package:flutter_login_api_rest/app/app_bloc.dart';
+import 'package:flutter_login_api_rest/app/login/login_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_api_rest/app/app_widget.dart';
@@ -12,7 +13,8 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: HomeModule()),
+        Router('/', module: LoginModule()),
+        Router('/home', module: HomeModule()),
       ];
 
   @override
